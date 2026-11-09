@@ -11,10 +11,10 @@
 :root[data-theme="dark"]{--bg:#0e141c;--card:#18212c;--ink:#e6ebf2;--mute:#9aa7b8;--line:#2b3745;--hd:#12345c;--hd2:#1a5483;--g:#45b36f;--gi:#07140c;--soft:#1b3326;--fld:#0f161e;color-scheme:dark}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{margin:0;background:radial-gradient(1200px 500px at 50% -120px,color-mix(in srgb,var(--hd2) 22%,transparent),transparent),var(--bg);color:var(--ink);font:16px/1.55 "Segoe UI",Roboto,system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:linear-gradient(90deg,var(--hd),var(--hd2));color:#fff;display:flex;align-items:center;gap:6px;padding:10px 14px}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:linear-gradient(90deg,var(--hd),var(--hd2));color:#fff;display:flex;align-items:center;gap:6px;padding:10px 14px}
 .logo{font-weight:800;font-size:1.2rem;margin-right:auto;letter-spacing:.2px}.logo i{color:#7ee2a8;font-style:normal}
-header button,header a{background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:8px;padding:8px 11px;font:600 .85rem inherit;cursor:pointer;text-decoration:none}
-header button:hover{background:rgba(255,255,255,.26)}
+.topbar button,.topbar a{background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:8px;padding:8px 11px;font:600 .85rem inherit;cursor:pointer;text-decoration:none}
+.topbar button:hover{background:rgba(255,255,255,.26)}
 .mw{position:relative}
 #menu{display:none;position:absolute;right:0;top:44px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px;min-width:210px;box-shadow:0 10px 30px rgba(0,0,0,.25);overflow:hidden}
 #menu.on{display:block}#menu button{display:block;width:100%;text-align:left;background:none;color:var(--ink);border-radius:0;padding:12px 16px;font-size:.95rem}
@@ -28,7 +28,7 @@ main{max-width:860px;margin:0 auto;padding:14px}
 :root[data-tool=cal]{--hd:#3a2a8a;--hd2:#6d4fd6;--g:#7c5cf0;--gi:#fff;--soft:color-mix(in srgb,#7c5cf0 13%,var(--card))}
 :root[data-tool=sci]{--hd:#1f2933;--hd2:#3b4b5c;--g:#0097b8;--gi:#fff;--soft:color-mix(in srgb,#0097b8 13%,var(--card))}
 .tool h2::before{margin-right:8px}#t-age h2::before{content:"🎂"}#t-mar h2::before{content:"💍"}#t-dth h2::before{content:"🕊️"}#t-dat h2::before{content:"📆"}#t-cal h2::before{content:"🗓️"}#t-sci h2::before{content:"🧮"}
-header,footer{transition:background .3s}
+.topbar,footer{transition:background .3s}
 #stats{display:none;gap:10px;margin:12px 0;max-width:520px}#stats .st{flex:1;background:rgba(255,255,255,.1);border-radius:12px;padding:10px 6px;text-align:center}#stats b{display:block;font-size:1.3rem;color:#fff}#stats span{font-size:.75rem;opacity:.85}#stats .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#46e08a;margin-right:5px;animation:pl2 1.4s infinite}@keyframes pl2{50%{opacity:.25}}
 #tour{position:fixed;inset:0;z-index:100;animation:tf .3s ease}#tour.out{opacity:0;transition:opacity .3s}
 @keyframes tf{from{opacity:0}}
@@ -76,16 +76,16 @@ section.blk{background:var(--card);border:1px solid var(--line);border-radius:16
 textarea{width:100%;min-height:90px}.fm input,.fm select,.fm textarea{width:100%;margin-bottom:8px;display:block}
 footer{background:var(--hd);color:#dbe7f5;margin-top:24px;padding:22px 14px}footer div{max-width:860px;margin:0 auto}footer a{color:#9fd6ff;margin-right:14px;cursor:pointer;display:inline-block;margin-bottom:6px}
 dialog{width:min(560px,92vw);max-height:84vh;overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);max-width:520px}
-@media (max-width:640px){.row{display:block}.row>label{display:block;width:auto;margin:0 0 5px 3px;color:var(--mute)}.f{max-width:none}select,input{padding:0 10px;height:50px;font-size:1.05rem}.btn{width:100%;border-radius:24px}header .t{display:none}.tool,section.blk{padding:16px}}
+@media (max-width:640px){.row{display:block}.row>label{display:block;width:auto;margin:0 0 5px 3px;color:var(--mute)}.f{max-width:none}select,input{padding:0 10px;height:50px;font-size:1.05rem}.btn{width:100%;border-radius:24px}.topbar .t{display:none}.tool,section.blk{padding:16px}}
 </style>
 </head>
 <body>
-<header>
+<div class="topbar" role="banner">
 <span class="logo">Smart <i>Calculator</i></span>
 <a class="t" href="#support">Support</a><a class="t" href="#" onclick="repdlg.showModal();return false">Report a Problem</a>
 <button id="th" aria-label="Toggle theme">🌓</button>
 <div class="mw"><button id="mb" aria-label="Menu" style="font-size:1.45rem;line-height:1;padding:6px 12px">☰</button><div id="menu"></div></div>
-</header>
+</div>
 <div class="ad" data-ad="header">Advertisement space</div>
 <main>
 <div id="tools"></div>
