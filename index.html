@@ -1,5 +1,3 @@
-Claude
-Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +46,6 @@ header,footer{transition:background .3s}
 #tdots{display:flex;gap:5px;justify-content:center;margin:12px 0}#tdots i{width:7px;height:7px;border-radius:50%;background:var(--line);transition:all .3s}#tdots i.on{width:20px;border-radius:4px;background:var(--g)}
 .tbt{display:flex;justify-content:space-between;align-items:center}.tbt .btn{padding:9px 18px}.tx{background:none;border:0;color:var(--mute);font:600 .95rem inherit;cursor:pointer;padding:9px 6px}
 @media (prefers-reduced-motion:reduce){#tour,#tour *{animation:none!important;transition:none!important}}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}.stat{margin:0;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 6px;text-align:center}.stat b{display:block;font-size:1.45rem;color:#fff;font-variant-numeric:tabular-nums}.stat span{font-size:.78rem;color:#cfe0f3}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ade80;margin-right:5px;animation:bl 1.5s infinite}@keyframes bl{50%{opacity:.25}}
 .pg{min-height:75vh;display:flex;flex-direction:column;justify-content:center}.ad.big{min-height:260px}.ad{min-height:130px;margin:14px 0;border:1px dashed var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:.75rem}
 .tool{display:none;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 10px 40px rgba(11,58,110,.12);animation:in .25s ease}.tool.on{display:block}
 @keyframes in{from{opacity:0;transform:translateY(8px)}}
@@ -123,13 +120,12 @@ dialog{width:min(560px,92vw);max-height:84vh;overflow:auto;border:1px solid var(
 </main>
 <footer><div><b>Smart Calculator</b> – All in One Calculator<br><br>
 <a onclick="go('about')">About Us</a><a onclick="go('contact')">Contact Us</a><a onclick="go('legal:privacy')">Privacy Policy</a><a onclick="go('legal:terms')">Terms &amp; Conditions</a><a onclick="go('legal:disc')">Disclaimer</a><a onclick="repdlg.showModal()">Report a Problem</a><a onclick="go('support')">Support Developer</a>
-<div id="stats"><div class="st"><b id="s1">0</b><span><i class="dot"></i>Live on site</span></div><div class="st"><b id="s2">0</b><span>Using now</span></div><div class="st"><b id="s3">0</b><span>Monthly users</span></div></div>
-<div class="stats" id="stats"><div class="stat"><b id="slive">–</b><span><i class="dot"></i>Live now</span></div><div class="stat"><b id="stotal">–</b><span>Total users</span></div><div class="stat"><b id="smonth">–</b><span>Monthly users</span></div></div>
+<div id="stats"><div class="st"><b id="s1">0</b><span><i class="dot"></i>Live on site</span></div><div class="st"><b id="s2">0</b><span>Using now</span></div><div class="st"><b id="s3">0</b><span>Monthly users</span></div></div><small id="serr" style="display:block;color:#ffd7a8"></small>
 <div class="ad" data-ad="footer" style="margin:8px 0">Advertisement space</div><small>© <span id="yr"></span> Smart Calculator. All rights reserved.</small></div></footer>
 <dialog id="cdlg"><h3>Contact the developer</h3><p>Aryan Mishra. Questions, bugs, feedback, privacy or takedown requests are welcome.</p><p><a class="btn go" href="https://github.com/abhay2832" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none;text-align:center">Open GitHub profile</a></p><button class="btn" onclick="cdlg.close()">Close</button></dialog>
 <dialog id="dlg"><h3 id="dt"></h3><div id="db"></div><button class="btn" onclick="dlg.close()">Close</button></dialog>
 <script>
-const CFG={devName:"Aryan Mishra",devIntro:"AI-powered developer in progress. Learning by building, exploring AI and turning ideas into real-world projects.",devMessage:"",github:"https://github.com/abhay2832",supabaseUrl:"https://phiwacydchyjnxubnjfr.supabase.co",supabaseKey:"sb_publishable_4kOcbMKL2xcDygYLvprYmQ_1CXuUiJg",stats:{url:"",key:""},contact:"",upi:"",donateUrl:"",coffeeUrl:"",reportEmail:"",social:[]};
+const CFG={devName:"Aryan Mishra",devIntro:"AI-powered developer in progress. Learning by building, exploring AI and turning ideas into real-world projects.",devMessage:"",github:"https://github.com/abhay2832",stats:{url:"https://phiwacydchyjnxubnjfr.supabase.co",key:"sb_publishable_4kOcbMKL2xcDygYLvprYmQ_1CXuUiJg"},contact:"",upi:"",donateUrl:"",coffeeUrl:"",reportEmail:"",social:[]};
 const $=i=>document.getElementById(i),MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],FM=["January","February","March","April","May","June","July","August","September","October","November","December"];
 const dim=(y,m)=>new Date(y,m+1,0).getDate(),fmt=n=>n.toLocaleString("en-IN"),U=d=>Date.UTC(d.getFullYear(),d.getMonth(),d.getDate());
 const ds=d=>d.toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"}),wd=d=>d.toLocaleDateString("en-US",{weekday:"long"}),leap=y=>dim(y,1)==29;
@@ -233,21 +229,8 @@ addEventListener("keydown",kd);place();step(0)}
 (function(){const c=CFG.stats;if(!c||!c.url||!c.key)return;let vid;
 try{vid=localStorage.getItem("sc_vid");if(!vid){vid=(crypto.randomUUID?crypto.randomUUID():String(Math.random()).slice(2)+Date.now());localStorage.setItem("sc_vid",vid)}}catch(e){vid=String(Math.random()).slice(2)+Date.now()}
 let used=false;document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest(".tool .btn.go,#kb .eq"))used=true});
-const ping=async()=>{try{const u=used;used=false;const r=await fetch(c.url+"/rest/v1/rpc/stats_ping",{method:"POST",headers:{"Content-Type":"application/json",apikey:c.key,Authorization:"Bearer "+c.key},body:JSON.stringify({p_vid:vid,p_used:u})});if(!r.ok)throw 0;const d=await r.json();$("s1").textContent=fmt(d.live);$("s2").textContent=fmt(d.using);$("s3").textContent=fmt(d.monthly);$("stats").style.display="flex"}catch(e){$("stats").style.display="none"}};
+const ping=async()=>{try{const u=used;used=false;const r=await fetch(c.url+"/rest/v1/rpc/sc_ping",{method:"POST",headers:Object.assign({"Content-Type":"application/json",apikey:c.key},c.key.startsWith("sb_")?{}:{Authorization:"Bearer "+c.key}),body:JSON.stringify({p_vid:vid,p_used:u})});if(!r.ok)throw new Error(r.status+" "+(await r.text()).slice(0,140));const d=await r.json();$("s1").textContent=fmt(d.live);$("s2").textContent=fmt(d.using);$("s3").textContent=fmt(d.monthly);$("stats").style.display="flex";$("serr").textContent=""}catch(e){$("stats").style.display="flex";["s1","s2","s3"].forEach(i=>$(i).textContent="–");$("serr").textContent="Counter: "+(e.message||e)}};
 ping();setInterval(()=>{if(!document.hidden)ping()},30000)})();
-(function(){
-const u=CFG.supabaseUrl,k=CFG.supabaseKey;if(!u||!k)return;
-let vid="";try{vid=localStorage.getItem("sc_vid")||"";if(!vid){vid=crypto.randomUUID();localStorage.setItem("sc_vid",vid)}}catch(e){}
-if(!vid)vid=crypto.randomUUID();
-const sc=document.createElement("script");sc.src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4/dist/umd/supabase.js";
-sc.onload=async()=>{try{const sb=supabase.createClient(u,k),d=new Date(),ms=new Date(d.getFullYear(),d.getMonth(),1).toISOString();
-await sb.from("visitors").upsert({id:vid,last_seen:d.toISOString()});
-const cnt=async()=>{const a=await sb.from("visitors").select("id",{count:"exact",head:true}),b=await sb.from("visitors").select("id",{count:"exact",head:true}).gte("last_seen",ms);if(a.count!=null)$("stotal").textContent=fmt(a.count);if(b.count!=null)$("smonth").textContent=fmt(b.count)};
-cnt();setInterval(cnt,60000);
-const ch=sb.channel("online",{config:{presence:{key:vid}}});
-ch.on("presence",{event:"sync"},()=>{$("slive").textContent=fmt(Object.keys(ch.presenceState()).length)});
-ch.subscribe(async x=>{if(x=="SUBSCRIBED")await ch.track({t:Date.now()})})}catch(e){}};
-document.head.appendChild(sc)})();
 show("age");setTimeout(tour,900);$("yr").textContent=new Date().getFullYear();
 $("dev").innerHTML=CFG.devName?`<b>${CFG.devName}</b>${CFG.devIntro?" – "+CFG.devIntro:""} ${CFG.devMessage}<br><a href="${CFG.github}" target="_blank" rel="noopener">GitHub profile</a>`:"Developer profile has not been added yet.";
 $("sup").innerHTML=(CFG.upi?`<p>UPI: <b>${CFG.upi}</b></p>`:"")+(CFG.donateUrl?`<a class="btn go" href="${CFG.donateUrl}" target="_blank" rel="noopener">Donate</a> `:"")+(CFG.coffeeUrl?`<a class="btn" href="${CFG.coffeeUrl}" target="_blank" rel="noopener">Buy me a coffee</a>`:"")||"";
@@ -285,6 +268,3 @@ function legal(t){$("dt").textContent=t;$("db").innerHTML=LG[t];dlg.showModal()}
 </script>
 </body>
 </html>
- 
-
-
