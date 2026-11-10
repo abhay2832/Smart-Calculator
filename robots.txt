@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abhay2832.github.io/Smart-Calculator/sitemap.xml
