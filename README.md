@@ -257,7 +257,7 @@ Using Smart Calculator is already enough, and nothing is locked behind a payment
 
 <br/>
 
-[![GitHub](https://img.shields.io/badge/GitHub-abhay2832-181717?style=for-the-badge&logo=github)](https://github.com/abhay2832)
+[![GitHub](https://github.com/abhay2832)
 
 <br/>
 
