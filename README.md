@@ -253,7 +253,9 @@ Using Smart Calculator is already enough, and nothing is locked behind a payment
 
 <div align="center">
 
-**Aryan Mishra**
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=26&duration=2500&pause=800&color=42A5F5&center=true&vCenter=true&width=700&height=50&lines=Hi%2C+I'm+Aryan+Mishra+%F0%9F%91%8B;I+build+simple+tools+for+everyone;Thanks+for+visiting+Smart+Calculator+%F0%9F%92%99" alt="Developer typing animation" />
+
+<br/>
 
 [![GitHub](https://img.shields.io/badge/GitHub-abhay2832-181717?style=for-the-badge&logo=github)](https://github.com/abhay2832)
 
@@ -263,10 +265,24 @@ Using Smart Calculator is already enough, and nothing is locked behind a payment
 
 <br/><br/>
 
-⭐ **If you like this project, please give it a star!** ⭐
+<a href="https://github.com/abhay2832/Smart-Calculator">
+  <img src="https://img.shields.io/badge/%E2%AD%90%20Star%20this%20repo-If%20it%20helped%20you-ffc107?style=for-the-badge&logo=github&logoColor=black" alt="Star this repo" />
+</a>
+
+<br/><br/>
+
+<img src="https://komarev.com/ghpvc/?username=abhay2832&label=Visitors&color=1e88e5&style=for-the-badge" alt="Visitors" />
+
+<br/><br/>
+
+**Made with ❤️ in India**
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:42a5f5,50:1565c0,100:0b3a6e&height=140&section=footer" alt="footer" />
+<a href="#">⬆️ Back to top</a>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:42a5f5,50:1565c0,100:0b3a6e&height=220&section=footer&text=Thank%20You%20for%20Visiting&fontSize=38&fontColor=ffffff&animation=twinkling&fontAlignY=62" alt="Footer wave" />
 
 </div>
+
+
