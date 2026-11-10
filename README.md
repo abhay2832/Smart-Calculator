@@ -253,17 +253,50 @@ Using Smart Calculator is already enough, and nothing is locked behind a payment
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=26&duration=2500&pause=800&color=42A5F5&center=true&vCenter=true&width=700&height=50&lines=Hi%2C+I'm+Aryan+Mishra+%F0%9F%91%8B;I+build+simple+tools+for+everyone;Thanks+for+visiting+Smart+Calculator+%F0%9F%92%99" alt="Developer typing animation" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b3a6e,50:1565c0,100:42a5f5&height=180&section=header&text=Aryan%20Mishra&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=42&desc=Developer%20of%20Smart%20Calculator&descAlignY=64&descSize=18" alt="Developer banner" />
 
-<br/>
-
-[![GitHub](https://github.com/abhay2832)
-
-<br/>
-
-<img src="https://github-readme-stats.vercel.app/api?username=abhay2832&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="165" alt="GitHub stats" />
+<a href="https://github.com/abhay2832">
+  <img src="https://github.com/abhay2832.png?size=200" width="120" alt="Aryan Mishra" />
+</a>
 
 <br/><br/>
+
+<a href="https://github.com/abhay2832">
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=24&duration=2500&pause=900&color=42A5F5&center=true&vCenter=true&width=720&height=50&lines=Hi+there%2C+I+am+Aryan+Mishra;I+build+simple+tools+for+everyone;Free.+Fast.+Private.;Open+to+feedback+and+new+ideas" alt="Developer typing animation" />
+</a>
+
+<br/><br/>
+
+[![GitHub Profile](https://img.shields.io/badge/GitHub-Follow%20Me-181717?style=for-the-badge)](https://github.com/abhay2832)
+[![Live Site](https://img.shields.io/badge/Smart%20Calculator-Open%20Live%20Site-1e88e5?style=for-the-badge)](https://abhay2832.github.io/Smart-Calculator/)
+[![Feedback](https://img.shields.io/badge/Feedback-Open%20an%20Issue-ef5350?style=for-the-badge)](https://github.com/abhay2832/Smart-Calculator/issues)
+
+<br/>
+
+<img src="https://img.shields.io/github/followers/abhay2832?label=Followers&style=for-the-badge&color=42a5f5" alt="Followers" />
+<img src="https://img.shields.io/github/stars/abhay2832/Smart-Calculator?label=Stars&style=for-the-badge&color=ffc107" alt="Stars" />
+<img src="https://img.shields.io/github/forks/abhay2832/Smart-Calculator?label=Forks&style=for-the-badge&color=66bb6a" alt="Forks" />
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=html,css,js,github,git,vscode" alt="Skills" />
+
+</div>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="divider" />
+
+<div align="center">
+
+### 🎯 My Goal
+
+| | |
+| :---: | :--- |
+| 🛠️ | Build simple tools that save people time |
+| 🆓 | Keep everything free for everyone |
+| 🔒 | Respect your privacy, always |
+| 💡 | Keep improving with your feedback |
+
+<br/>
 
 <a href="https://github.com/abhay2832/Smart-Calculator">
   <img src="https://img.shields.io/badge/%E2%AD%90%20Star%20this%20repo-If%20it%20helped%20you-ffc107?style=for-the-badge&logo=github&logoColor=black" alt="Star this repo" />
@@ -271,7 +304,7 @@ Using Smart Calculator is already enough, and nothing is locked behind a payment
 
 <br/><br/>
 
-<img src="https://komarev.com/ghpvc/?username=abhay2832&label=Visitors&color=1e88e5&style=for-the-badge" alt="Visitors" />
+<img src="https://komarev.com/ghpvc/?username=abhay2832&label=Profile%20Views&color=1e88e5&style=for-the-badge" alt="Profile views" />
 
 <br/><br/>
 
@@ -281,8 +314,6 @@ Using Smart Calculator is already enough, and nothing is locked behind a payment
 
 <a href="#">⬆️ Back to top</a>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:42a5f5,50:1565c0,100:0b3a6e&height=220&section=footer&text=Thank%20You%20for%20Visiting&fontSize=38&fontColor=ffffff&animation=twinkling&fontAlignY=62" alt="Footer wave" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:42a5f5,50:1565c0,100:0b3a6e&height=240&section=footer&text=Thank%20You%20for%20Visiting&fontSize=38&fontColor=ffffff&animation=twinkling&fontAlignY=62" alt="Footer wave" />
 
 </div>
-
-
