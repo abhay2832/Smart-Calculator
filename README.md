@@ -125,7 +125,7 @@ A scientific calculator supporting brackets, powers, roots, trigonometry, logari
 
 1. Open the **[live site](https://abhay2832.github.io/Smart-Calculator/)**.
 2. Choose a calculator from the menu.
-3. Type your date as numbers, for example `25122005`.
+3. Type your date as numbers, for example `25/12/2005`.
 4. Press **Calculate** and the answer appears instantly.
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="divider" />
